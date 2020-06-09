@@ -2,4 +2,13 @@
     <string name="app_name">MyTelegram</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_user_default_name">Mukhiddin Mobile Dev</string>
+    <string name="settings_status_online">в сети</string>
+    <string name="settings_account_title">Аккаунт</string>
+    <string name="settings_default_phone_num">+998 99 868 3888</string>
+    <string name="settings_label_phone_num">Нажмите чтобы изменить номер телефона</string>
+    <string name="settings_label_login">Имя пользователя</string>
+    <string name="settings_default_login">\@MMMz0</string>
+    <string name="settings_default_bio">О себе</string>
+    <string name="settings_label_bio">Напишите немнога о себе</string>
 </resources>

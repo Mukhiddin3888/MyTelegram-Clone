@@ -28,4 +28,54 @@
         <!--TODO Dark theme -->
     </style>
 
+    <style name="settings_buttons">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="background">@drawable/ripple_effect</item>
+    </style>
+
+    <style name="settings_normal_text">
+        <item name="android:layout_marginTop">@dimen/margin16</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin16</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/material_drawer_item_primary_text</item>
+    </style>
+
+    <style name="settings_small_text">
+        <item name="android:layout_marginTop">@dimen/margin3</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin16</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/material_drawer_item_secondary_extra_text</item>
+    </style>
+
+    <style name="separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginTop">@dimen/margin8</item>
+        <item name="android:layout_marginStart">@dimen/margin16</item>
+        <item name="android:layout_marginEnd">@dimen/margin16</item>
+        <item name="android:background">@color/colorGrey</item>
+    </style>
+
+    <style name="mainToolbar">
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="circular_image">
+        <item name="civ_border_color">@color/colorGrey</item>
+        <item name="android:layout_width">@dimen/settings_change_image_width</item>
+        <item name="android:layout_height">@dimen/settings_user_change_photo_heigth</item>
+        <item name="android:layout_marginTop">@dimen/margin16</item>
+        <item name="android:layout_marginEnd">@dimen/margin16</item>
+    </style>
+
 </resources>
