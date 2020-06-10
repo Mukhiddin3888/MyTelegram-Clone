@@ -1,11 +1,14 @@
 <resources>
     <!-- Base application theme. -->
+
     <style name="AppThemeLight" parent="MaterialDrawerTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="popupTheme">@style/actionsMenu</item>
+        <item name="android:colorControlActivated">@color/primary</item>
 
 
         <!-- MaterialDrawer specific values -->
@@ -24,16 +27,20 @@
 
     </style>
 
-    <style name="AppThemeDark" parent="MaterialDrawerTheme">
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light">
         <!--TODO Dark theme -->
     </style>
+
+
+    <style name="actionsMenu" parent="Theme.AppCompat.Light">
+        <item name="background">@color/accent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
 
     <style name="settings_buttons">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:clickable">true</item>
-        <item name="android:focusable">true</item>
-        <item name="background">@drawable/ripple_effect</item>
     </style>
 
     <style name="settings_normal_text">
@@ -71,11 +78,35 @@
     </style>
 
     <style name="circular_image">
-        <item name="civ_border_color">@color/colorGrey</item>
+
+        <item name="civ_border_color">@color/primary</item>
         <item name="android:layout_width">@dimen/settings_change_image_width</item>
         <item name="android:layout_height">@dimen/settings_user_change_photo_heigth</item>
         <item name="android:layout_marginTop">@dimen/margin16</item>
         <item name="android:layout_marginEnd">@dimen/margin16</item>
+    </style>
+
+    <style name="editTextPhone">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/material_drawer_item_primary_text</item>
+        <item name="android:layout_margin">@dimen/margin16</item>
+        <item name="android:padding">@dimen/padding5</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="small_norm_text">
+        <item name="android:layout_marginTop">@dimen/margin16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/margin16</item>
+        <item name="android:layout_marginEnd">@dimen/margin16</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/smallText14</item>
     </style>
 
 </resources>

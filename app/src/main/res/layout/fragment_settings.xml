@@ -83,7 +83,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_account_title"
-        style="@style/settings_buttons">
+        style="@style/settings_buttons"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/ripple_effect"
+        >
 
         <TextView
             android:id="@+id/settings_phone_num"
@@ -111,7 +115,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_change_phone_num"
-        style="@style/settings_buttons">
+        style="@style/settings_buttons"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/ripple_effect">
 
         <TextView
             android:id="@+id/settings_login"
@@ -140,7 +147,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_change_login"
-        style="@style/settings_buttons">
+        style="@style/settings_buttons"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/ripple_effect">
 
         <TextView
             android:id="@+id/settings_bio"

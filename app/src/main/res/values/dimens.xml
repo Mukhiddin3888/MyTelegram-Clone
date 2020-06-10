@@ -15,5 +15,7 @@
     <dimen name="settings_user_change_photo_heigth">50dp</dimen>
     <dimen name="settings_ripple_radius">4dp</dimen>
     <dimen name="usernameSize">18sp</dimen>
+    <dimen name="padding5">5dp</dimen>
+    <dimen name="smallText14">14sp</dimen>
 
 </resources>

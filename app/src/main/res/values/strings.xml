@@ -11,4 +11,11 @@
     <string name="settings_default_login">\@MMMz0</string>
     <string name="settings_default_bio">О себе</string>
     <string name="settings_label_bio">Напишите немнога о себе</string>
+    <string name="settings_menu_change_name">Изменить имя</string>
+    <string name="settings_menu_exit">Выход</string>
+    <string name="register_label_text_enter_code">Введите код</string>
+    <string name="register_check_text_enter_code">Мы отправили SMS с кодом проверки на ваш телефон</string>
+    <string name="register_default_num_code">---------</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="register_toast_enter_phone_num">Введите номер телефона</string>
 </resources>
