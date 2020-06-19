@@ -7,13 +7,18 @@ import androidx.appcompat.widget.Toolbar
 import com.example.mytelegram.Activities.RegisterActivity
 import com.example.mytelegram.UI.Fragments.ChatsFragment
 import com.example.mytelegram.UI.Objects.AppDrawer
+import com.example.mytelegram.Utilities.AUTH
+import com.example.mytelegram.Utilities.initFirebase
+import com.example.mytelegram.Utilities.replaceActivity
+import com.example.mytelegram.Utilities.replaceFragment
 import com.example.mytelegram.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mToolbar: Toolbar
-    private lateinit var mAppDrawer:AppDrawer
+     lateinit var mAppDrawer:AppDrawer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,16 +33,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if(false){
+        if(AUTH.currentUser !=null){
             setSupportActionBar(mToolbar)
             mAppDrawer.create()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.dataContainer,
-                    ChatsFragment()
-                ).commit()
+            replaceFragment(ChatsFragment(),false)
         }else{
-            val intent = Intent(this,RegisterActivity::class.java)
-            startActivity(intent)
+            replaceActivity(RegisterActivity())
         }
 
     }
@@ -45,5 +46,7 @@ class MainActivity : AppCompatActivity() {
     private fun initFields() {
         mToolbar = mBinding.mainToolbar
         mAppDrawer = AppDrawer(this,mToolbar)
+
+        initFirebase()
     }
 }

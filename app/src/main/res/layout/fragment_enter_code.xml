@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/register_text_enter_code_check"
         style="@style/editTextPhone"
-        android:maxLength="4"
+        android:maxLength="6"
         android:textColorHint="@color/primary"
         android:hint="@string/register_default_num_code"
         />

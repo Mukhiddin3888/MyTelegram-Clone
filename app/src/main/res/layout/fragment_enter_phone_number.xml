@@ -9,9 +9,9 @@
     <EditText
         android:id="@+id/register_input_phone_number"
         style="@style/editTextPhone"
-        android:maxLength="9"
+        android:maxLength="13"
+        android:hint="@string/register_enter_phone_num"
         android:textColorHint="@color/colorGrey"
-        android:autofillHints="@string/register_toast_enter_phone_num"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,8 @@
         android:backgroundTint="@color/primary"
         android:src="@drawable/ic_btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

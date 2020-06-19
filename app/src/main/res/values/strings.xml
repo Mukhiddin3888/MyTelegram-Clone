@@ -18,4 +18,8 @@
     <string name="register_default_num_code">---------</string>
     <string name="register_title_your_phone">Ваш телефон</string>
     <string name="register_toast_enter_phone_num">Введите номер телефона</string>
+    <string name="register_enter_phone_num">Введите номер телефона</string>
+    <string name="edit_first_name">Имя</string>
+    <string name="edit_surname">Фамилия</string>
+    <string name="settings_toast_emty_name">Имя не может быть пустым</string>
 </resources>

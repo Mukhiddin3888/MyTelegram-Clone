@@ -1,46 +1,54 @@
 package com.example.mytelegram.UI.Fragments
 
-import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import com.example.mytelegram.R
-import kotlinx.android.synthetic.main.fragment_enter_code.*
-import kotlinx.android.synthetic.main.fragment_enter_phone_number.*
 
-class EnterCodeFragment : Fragment(R.layout.fragment_enter_code) {
+import androidx.fragment.app.Fragment
+import com.example.mytelegram.Activities.RegisterActivity
+import com.example.mytelegram.MainActivity
+import com.example.mytelegram.R
+import com.example.mytelegram.Utilities.*
+import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.fragment_enter_code.*
+
+class EnterCodeFragment(val phoneNumber: String, val id: String) :
+    Fragment(R.layout.fragment_enter_code) {
+
+
     override fun onStart() {
         super.onStart()
+        (activity as RegisterActivity).title = phoneNumber
+        register_input_code.addTextChangedListener(AppTextWatcher {
 
-        register_input_code.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-
-                val string = register_input_code.text.toString()
-                if (string.length == 4) {
-                    verifyCode()
-                }
-
-
+            val string = register_input_code.text.toString()
+            if (string.length == 6) {
+                enterCode()
             }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
-
         })
 
     }
 
-    fun verifyCode() {
-        Toast.makeText(activity, "Okey", Toast.LENGTH_SHORT).show()
+    private fun enterCode() {
+        val code = register_input_code.text.toString()
+        val credential = PhoneAuthProvider.getCredential(id, code)
+        AUTH.signInWithCredential(credential).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val dataMap = mutableMapOf<String, Any>()
+
+                val uid = AUTH.currentUser?.uid.toString()
+                dataMap[CHILD_ID] = uid
+                dataMap[CHILD_PHONE] = phoneNumber
+                dataMap[CHILD_USERNAME] = uid
+
+
+                REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap)
+                    .addOnCompleteListener { task2 ->
+                        if (task2.isSuccessful) {
+                            showToast("Добро пожаловать")
+                            (activity as RegisterActivity).replaceActivity(MainActivity())
+                        } else showToast(task2.exception?.message.toString())
+                    }
+
+            } else  showToast(task.exception?.message.toString())
+        }
     }
 
 }

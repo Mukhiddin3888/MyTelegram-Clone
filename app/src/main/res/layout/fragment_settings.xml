@@ -39,7 +39,7 @@
             style="@style/circular_image" />
 
         <TextView
-            android:id="@+id/settings_username"
+            android:id="@+id/settings_fullName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/materialize_right_side_icon_margin"
@@ -60,7 +60,7 @@
             android:text="@string/settings_status_online"
             android:textSize="@dimen/material_drawer_item_primary_text_small"
             app:layout_constraintStart_toEndOf="@id/settings_profile_image"
-            app:layout_constraintTop_toBottomOf="@id/settings_username" />
+            app:layout_constraintTop_toBottomOf="@id/settings_fullName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -111,7 +111,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/settings_change_login"
+        android:id="@+id/settings_change_username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_change_phone_num"
@@ -121,21 +121,21 @@
         android:background="@drawable/ripple_effect">
 
         <TextView
-            android:id="@+id/settings_login"
+            android:id="@+id/settings_username"
             android:text="@string/settings_default_login"
-            app:layout_constraintTop_toTopOf="@id/settings_change_login"
+            app:layout_constraintTop_toTopOf="@id/settings_change_username"
             style="@style/settings_normal_text"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/settings_label_login"
+            android:id="@+id/settings_label_username"
             android:text="@string/settings_label_login"
             android:layout_marginTop="@dimen/margin3"
-            app:layout_constraintTop_toBottomOf="@id/settings_login"
+            app:layout_constraintTop_toBottomOf="@id/settings_username"
             style="@style/settings_small_text"
             tools:ignore="MissingConstraints" />
         <View
-            app:layout_constraintTop_toBottomOf="@id/settings_label_login"
+            app:layout_constraintTop_toBottomOf="@id/settings_label_username"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/separator" />
@@ -146,7 +146,7 @@
         android:id="@+id/settings_change_bio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settings_change_login"
+        app:layout_constraintTop_toBottomOf="@id/settings_change_username"
         style="@style/settings_buttons"
         android:focusable="true"
         android:clickable="true"

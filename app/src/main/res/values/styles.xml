@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorAccent</item>
         <item name="popupTheme">@style/actionsMenu</item>
-        <item name="android:colorControlActivated">@color/primary</item>
+        <item name="colorControlActivated">@color/primary</item>
 
 
         <!-- MaterialDrawer specific values -->
@@ -92,7 +92,7 @@
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">@dimen/material_drawer_item_primary_text</item>
         <item name="android:layout_margin">@dimen/margin16</item>
-        <item name="android:padding">@dimen/padding5</item>
+        <item name="android:padding">@dimen/padding10</item>
         <item name="android:inputType">phone</item>
         <item name="android:maxLines">1</item>
         <item name="android:gravity">center</item>
